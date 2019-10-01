@@ -1,0 +1,133 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Receiving Payments · Web Monetization</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="When a user has Web Monetization (WM) enabled in their browser and they visit a"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Receiving Payments · Web Monetization"/><meta property="og:type" content="website"/><meta property="og:url" content="https://webmonetization.org/"/><meta property="og:description" content="When a user has Web Monetization (WM) enabled in their browser and they visit a"/><meta property="og:image" content="https://webmonetization.org/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/fav-webmonetization.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/custom.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/wm-icon.svg" alt="Web Monetization"/><h2 class="headerTitleWithLogo">Web Monetization</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/getting-started" target="_self">Docs</a></li><li class=""><a href="https://adrianhopebailie.github.io/web-monetization/" target="_self">Specification</a></li><li class=""><a href="https://forum.interledger.org" target="_self">Forum</a></li><li class=""><a href="https://github.com/interledger/webmonetization.org" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Explainer</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Overview</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/getting-started">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/api">API</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Explainer</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/explainer">Web Monetization</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/receiving">Receiving Payments</a></li><li class="navListItem"><a class="navItem" href="/docs/sending">Senders</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">More</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/specification">Specification</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Receiving Payments</h1></header><article><div><span><p>When a user has Web Monetization (WM) enabled in their browser and they visit a
+monetized website, the browser resolves a unique receiving address for payments
+to the website's WM receiver.</p>
+<p>The browser then begins sending payments to the website's receiving address
+through the user's WM Sender.</p>
+<p>This page describes the functions of the Web Monetization Receiver and how
+existing payment services might become a WM receiver.</p>
+<h2><a class="anchor" aria-hidden="true" id="payment-pointer"></a><a href="#payment-pointer" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Payment Pointer</h2>
+<p>The website specifies a <a href="https://paymentpointers.org">Payment Pointer</a> from
+which the browser fetches connection details to
+<a href="#open-a-stream">open a payment stream</a> with the receiver.</p>
+<p>Since the Payment Pointer is a URL it is possible for the host of the Payment
+Pointer to redirect the browser to an alternate address using standard HTTP
+redirects.</p>
+<p>The expectation is that a WM Receiver will issue one or more payment pointers to
+it's users and they will embed this into their websites that they wish to
+monetize.</p>
+<p>One of the benefits of the Payment Pointer is it provides a level of indirection
+that allows the browser to protect the privacy of the user from the WM Sender.</p>
+<p>Specifically, the browser uses the Payment Pointer in combination with a unique
+session id to request a unique receiving address for payments for each session.
+Only the receiving address is given to the WM Sender.</p>
+<p>The WM Sender never sees the Payment Pointer (which is easy to correlate to the
+website), only the address which is unique for each session.</p>
+<h2><a class="anchor" aria-hidden="true" id="receiving-payments"></a><a href="#receiving-payments" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Receiving Payments</h2>
+<p>Any entity that is able to accept payments on behalf of websites can be a Web
+Monetization receiver if it offers support for the necessary protocols.</p>
+<p>The protocol for establishing a micropayments stream and sending payments is the
+Interledger protocol. Interledger allows for payments to be sent at very high
+volumes and in very small denominations.</p>
+<p>Payments are sent as Interledger packets which are optimised for this use case.</p>
+<p>To accept a stream of micropayments on behalf of its users a WM receiver MUST
+support 3 protocols from the Interledger stack:</p>
+<h4><a class="anchor" aria-hidden="true" id="simple-payment-setup-protocol-https"></a><a href="#simple-payment-setup-protocol-https" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Simple Payment Setup Protocol (HTTPS)</h4>
+<p>The receiver must host a secure HTTP endpoint that returns a unique receiving
+address and shared secret for each request.</p>
+<h5><a class="anchor" aria-hidden="true" id="example-respond-to-an-spsp-request"></a><a href="#example-respond-to-an-spsp-request" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example: Respond to an SPSP request</h5>
+<ul>
+<li><em>Alice</em> is a customer of <em>Secure Wallet</em> who are able to act as a WM Receiver.</li>
+<li>She is allocated the SPSP endpoint URL <code>https://securewallet.example/~alice</code></li>
+<li>This URL can also be expressed as a Payment Pointer:
+<code>$securewallet.example/~alice</code></li>
+<li>When a GET request is made to <code>https://securewallet.example/~alice</code> with the
+<code>accept</code> header of <code>application/spsp4+json</code> then the server responds with a
+JSON response carrying the Interledger address and a shared secret to use to
+<a href="#open-a-stream">open a payment stream</a> with <em>Secure Wallet</em> and send Alice
+money.</li>
+</ul>
+<p>More details on SPSP can be found in
+<a href="https://interledger.org/rfcs/0009-simple-payment-setup-protocol/">IL-RFC 0009 - Simple Payment Setup Protocol</a>.</p>
+<h4><a class="anchor" aria-hidden="true" id="interledger-protocol"></a><a href="#interledger-protocol" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Interledger Protocol</h4>
+<p>The next service that the receiver MUST setup is a link into the Interledger
+network. More specifically, the receiver must have an Interledger connection
+(direct or indirect) to any WM senders that wish to pay the WM receiver.</p>
+<p>Initially we expect the number of senders and receivers to be small and they
+will likely connect to each other directly but in time there will be a need for
+intermediary aggregators that are licensed to accept payments from senders and
+aggregate and pay these out to receivers.</p>
+<h4><a class="anchor" aria-hidden="true" id="stream-protocol"></a><a href="#stream-protocol" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>STREAM Protocol</h4>
+<p>The STREAM protocol is used to establish packet switched connections between
+entities using the Interledger protocol. It is loosely based on QUIC and
+provides similar features over ILP that QUIC does over IP.</p>
+<p>For the purposes of being a WM receiver an entity only needs to run a STREAM
+server, accept connections and handle the incoming payments sent over the
+connection.</p>
+<p>The ILP Address and shared secret acquired by the browser through SPSP
+(<a href="#-Simple-Payment-Setup-Protocol-HTTPS">see above</a>) is used by the browser to
+establish a STREAM connection with the WM receiver, following which a stream of
+payments can be made to the receiver until finally the stream is closed by the
+client.</p>
+<p>Each set of connection parameters (ILP Address and shared secret) is unique and
+allows the receiver to correlate the original SPSP request with the incoming
+connection. This makes it easier for receivers to associate incoming payments
+with different user accounts and Web Monetization sessions. i.e. The website can
+associate payments with a user session but the user's WM Sender can't correlate
+the payments it makes with a website.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/explainer"><span class="arrow-prev">← </span><span>Web Monetization</span></a><a class="docs-next button" href="/docs/sending"><span>Senders</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#payment-pointer">Payment Pointer</a></li><li><a href="#receiving-payments">Receiving Payments</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>WebMonetization.org</h5></div><div><h5>Navigation</h5><a href="/">Home</a><a href="/meta-tag">Meta Tag Generator</a></div><div><h5>Community</h5><a href="https://github.com/interledger/webmonetization.org" target="_blank" rel="noreferrer noopener">GitHub</a><a href="https://forum.interledger.org" target="_blank" rel="noreferrer noopener">ILP Forum</a><a href="https://discourse.wicg.io/t/proposal-web-monetization-a-new-revenue-model-for-the-web/3785" target="_blank" rel="noreferrer noopener">Web Platform Incubator Community Group</a><a href="https://interledger.org" target="_blank" rel="noreferrer noopener">Interledger</a></div><div><h5>Resources</h5><a href="/docs/en/getting-started.html">Docs</a><a href="https://adrianhopebailie.github.io/web-monetization/">Specification</a><a href="https://paymentpointers.org">Payment Pointers</a></div></section><section class="copyright"></section></footer></div></body></html>
