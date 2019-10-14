@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Web Monetization Explainer · Web Monetization</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Web Monetization is a proposed API standard that allows websites to request a"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Web Monetization Explainer · Web Monetization"/><meta property="og:type" content="website"/><meta property="og:url" content="https://webmonetization.org/"/><meta property="og:description" content="Web Monetization is a proposed API standard that allows websites to request a"/><meta property="og:image" content="https://webmonetization.org/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/fav-webmonetization.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/custom.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/wm-icon.svg" alt="Web Monetization"/><h2 class="headerTitleWithLogo">Web Monetization</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/getting-started" target="_self">Docs</a></li><li class=""><a href="https://adrianhopebailie.github.io/web-monetization/" target="_self">Specification</a></li><li class=""><a href="https://forum.interledger.org" target="_self">Forum</a></li><li class=""><a href="https://github.com/interledger/webmonetization.org" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Explainer</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Overview</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/getting-started">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/api">API</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Explainer</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/docs/explainer">Web Monetization</a></li><li class="navListItem"><a class="navItem" href="/docs/receiving">Receiving Payments</a></li><li class="navListItem"><a class="navItem" href="/docs/sending">Senders</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">More</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/specification">Specification</a></li></ul></div></div></section></div><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>explainer · Web Monetization</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="---"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="explainer · Web Monetization"/><meta property="og:type" content="website"/><meta property="og:url" content="https://webmonetization.org/"/><meta property="og:description" content="---"/><meta property="og:image" content="https://webmonetization.org/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/fav-webmonetization.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/custom.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/wm-icon.svg" alt="Web Monetization"/><h2 class="headerTitleWithLogo">Web Monetization</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/getting-started" target="_self">Docs</a></li><li class=""><a href="https://adrianhopebailie.github.io/web-monetization/" target="_self">Specification</a></li><li class=""><a href="https://forum.interledger.org" target="_self">Forum</a></li><li class=""><a href="https://github.com/interledger/webmonetization.org" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Explainer</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Overview</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/getting-started">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/docs/api">API</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Explainer</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/docs/explainer">explainer</a></li><li class="navListItem"><a class="navItem" href="/docs/receiving">Receiving Payments</a></li><li class="navListItem"><a class="navItem" href="/docs/sending">Senders</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">More</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/specification">Specification</a></li></ul></div></div></section></div><script>
             var coll = document.getElementsByClassName('collapsible');
             var checkActiveCategory = true;
             for (var i = 0; i < coll.length; i++) {
@@ -54,7 +54,12 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">Web Monetization Explainer</h1></header><article><div><span><p>Web Monetization is a proposed API standard that allows websites to request a
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">explainer</h1></header><article><div><span><hr>
+<p>id: explainer
+title: Web Monetization Explainer
+sidebar_label: Web Monetization</p>
+<hr>
+<p>Web Monetization is a proposed API standard that allows websites to request a
 stream of very small payments from a user e.g. fractions of a cent.</p>
 <p>This provides a framework for new revenue models for websites and web-based
 services, as an alternative to subscription services or advertising, while
@@ -69,10 +74,10 @@ exchange for consuming the content and/or services on the website.</p>
 <p>The experience must be frictionless for users. It must allow users to
 pre-approve payments in aggregate or delegate the authorization of the
 individual small payments to a component/service (a Web Monetization Agent) that
-makes decisions about when to pay websites and how much without the need for
+makes decisions about when to pay websites, and how much, without the need for
 user interaction.</p>
-<p>This system must preserve the user's privacy. It must not be possible for
-websites to track users on the basis of the payments they make and it must not
+<p>This system must preserve the user's privacy: It must not be possible for
+websites to track users on the basis of the payments they make, and it must not
 be possible for the user's payment provider to get details of a user's browsing
 history.</p>
 <h2><a class="anchor" aria-hidden="true" id="non-goals"></a><a href="#non-goals" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Non-goals</h2>
@@ -114,22 +119,21 @@ receiver)</strong>, responsible for accepting payments from their user's WM send
 <p><em>This flow is simplified to exclude some edge cases. Numbers correspond to the
 diagram above.</em></p>
 <ol>
-<li>When the user visits a website that uses Web Monetization the website
-provides the browser (via a <code>meta</code> tag in the <code>head</code> section) with a
-<strong>Payment Pointer</strong> where it accepts payments.</li>
+<li>Sites that support Web Monetization include a <code>meta</code> tag whose <code>content</code> is a <strong>Payment Pointer</strong>.
+As the name implies, the Payment Pointer is where the site accepts payments.</li>
 <li>The browser uses its internal <strong>Web Monetization Agent</strong> to calculate an
 appropriate rate of payments to make to the website.</li>
 <li>The browser generates a unique session id for this payment session.</li>
 <li>The browser fetches a unique receiving address and secret for the session
 from the website's <strong>WM Receiver</strong>.</li>
-<li>While the user has the page in focus the browser begins initiating payments
-at the calculated rate to the website, using the user's <strong>WM Sender</strong>.
+<li>While the user has the page in focus, the browser begins initiating payments
+at the calculated rate to the website using the user's <strong>WM Sender</strong>.
 <em>(<strong>ISSUE</strong>: What about people listening to monetised music in a background
 tab? See
 <a href="https://github.com/adrianhopebailie/web-monetization/issues/12">Issue #12</a>)</em></li>
 <li>The <strong>WM Sender</strong> sends the payment to the <strong>WM Receiver</strong>.</li>
 <li>The <strong>WM Sender</strong> notifies the browser of successful payments.</li>
-<li>The browser, in turn, raises an event that informs the web page of the
+<li>The browser, in turn, dispatches an event that informs the web page of the
 payment.</li>
 <li>The web page can connect to its own backend systems to verify that the
 payment was received (using the session id to correlate the incoming payment
@@ -160,26 +164,29 @@ as we figure out how this could be built directly into browsers.</p>
 providers and implementors to refine the design and produce a W3C
 standards-track specification.</p>
 <h3><a class="anchor" aria-hidden="true" id="declaritive-vs-imperative-api"></a><a href="#declaritive-vs-imperative-api" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Declaritive vs Imperative API?</h3>
-<p>The current proposal is for a hybrid declarative and imperative API whereby
-websites declare their ability to accept micropayments using a <code>&lt;meta&gt;</code> tag in
-the page header and then access the global <code>monetization</code> object on the DOM to
-track incoming payment events and react to these.</p>
+<p>The current proposal is for a hybrid declarative and imperative API.
+Websites declare their ability to accept WM payments using a <code>&lt;meta&gt;</code> tag in
+the page header. Imperatively, a developer can then access the global <code>monetization</code>
+object on the DOM to track incoming payments stream/events and react to these.</p>
 <h3><a class="anchor" aria-hidden="true" id="use-updated-payment-request-and-payment-handler-apis"></a><a href="#use-updated-payment-request-and-payment-handler-apis" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use updated Payment Request and Payment Handler APIs?</h3>
 <p>The Web Payments WG has designed two APIs that follow a similar pattern to Web
 Monetization but for a different use case.</p>
 <p>The Payment Request API is an imperative API that websites can use to request a
-single discrete payment.</p>
-<p>This is designed to always prompt the user for authorization as part of the flow
+single discrete payment: the Payment Request API is designed to always prompt
+the user for authorization as part of the flow
 as it is designed for payment sizes where this is necessary. However, nothing
 prevents this API also supporting a non-interactive flow that supports Web
 Monetization use cases.</p>
 <p>Further, the Payment Handler API aligns well with the model anticipated for Web
-Monetization senders. A sender might manifest as a specialized Payment Handler
-capable of returning not just a <code>PaymentRequestResponse</code> but also a handle to a
+Monetization senders: A sender might manifest as a specialized Payment Handler
+capable of returning not just a <code>PaymentResponse</code> but also a handle to a
 stream of micropayments.</p>
-<h3><a class="anchor" aria-hidden="true" id="streams"></a><a href="#streams" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Streams</h3>
+<h3><a class="anchor" aria-hidden="true" id="this-sounds-a-lot-like-streams"></a><a href="#this-sounds-a-lot-like-streams" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>This sounds a lot like Streams...</h3>
 <p>In-keeping with the trend toward streaming APIs, the API surface could be
-updated to implement the stream API rather than repeated events.</p>
+updated to implement the <a href="https://streams.spec.whatwg.org">WHATWG Stream API</a> rather
+than events.</p>
+<p>We will investigate the pros/cons of using streams and events for Web Monetization as
+part of the incubation process.</p>
 <h2><a class="anchor" aria-hidden="true" id="concepts"></a><a href="#concepts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Concepts</h2>
 <p>Web Monetization depends on two critical technologies/concepts that enable open
 and interoperable payments between providers and websites for very small
@@ -232,11 +239,11 @@ generate new addresses on demand (this would be a feature of her WM receiver).</
 </blockquote>
 <h3><a class="anchor" aria-hidden="true" id="add-lt-meta-gt-tag-to-website-header"></a><a href="#add-lt-meta-gt-tag-to-website-header" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add &lt;meta&gt; tag to website header</h3>
 <p>The website puts a <code>&lt;meta&gt;</code> tag in the header of the HTML documents it serves
-with the <code>name</code> attribute equal to <code>monetization</code> and the <code>value</code> attribute
+with the <code>name</code> attribute equal to <code>monetization</code> and the <code>content</code> attribute
 equal to the <em>Payment Pointer</em> where the website will accept payments.</p>
 <blockquote>
 <p><strong>Example:</strong> Alice puts the tag
-<code>&lt;meta name=&quot;monetization&quot; value=&quot;$secure-wallet.example/~alice&quot;&gt;</code> into the
+<code>&lt;meta name=&quot;monetization&quot; content=&quot;$secure-wallet.example/~alice&quot;&gt;</code> into the
 <code>&lt;head&gt;</code> section of <em><a href="https://rocknrollblog.example">https://rocknrollblog.example</a></em>.</p>
 </blockquote>
 <p>Web Monetization only works on secure pages served over HTTPS (or
@@ -262,7 +269,7 @@ the relevant monetization events and only shows advertising if she isn't
 receiving payments.</p>
 </blockquote>
 <pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"monetization"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"$secure-wallet.example/~alice"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"monetization"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"$secure-wallet.example/~alice"</span> /&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
   <span class="hljs-keyword">if</span> (<span class="hljs-built_in">document</span>.monetization) {
@@ -343,7 +350,7 @@ dispatches the <code>monetizationstart</code> event on <code>document.monetizati
 event's type is <code>monetizationstart</code>. The event has a <code>detail</code> field with an
 object containing the Payment Pointer and the Session ID.</p></li>
 <li><p>The browser continues to send payments at the calculated rate. Every time
-it completes a payment (including the first payment) it dispatches a
+the it completes a payment (including the first payment) it dispatches a
 <code>monetizationprogress</code> event from <code>document.monetization</code>. The event has a
 <code>detail</code> field with an object containing the amount and currency of the
 payment.</p></li>
@@ -387,4 +394,4 @@ charity's website.)</p>
 <li><a href="https://addons.mozilla.org/en-US/firefox/addon/coil/">Firefox (Desktop or Android) + Coil extension</a></li>
 <li><a href="https://www.pumabrowser.com/">Puma Browser</a></li>
 </ul>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api"><span class="arrow-prev">← </span><span>API</span></a><a class="docs-next button" href="/docs/receiving"><span>Receiving Payments</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#goals">Goals</a></li><li><a href="#non-goals">Non-goals</a></li><li><a href="#overview-of-the-flow">Overview of the Flow</a><ul class="toc-headings"><li><a href="#glossary">Glossary</a></li><li><a href="#prerequisites">Prerequisites</a></li><li><a href="#flow">Flow</a></li></ul></li><li><a href="#why-is-a-standard-required">Why is a standard required?</a></li><li><a href="#design-discussion-points">Design Discussion Points</a><ul class="toc-headings"><li><a href="#declaritive-vs-imperative-api">Declaritive vs Imperative API?</a></li><li><a href="#use-updated-payment-request-and-payment-handler-apis">Use updated Payment Request and Payment Handler APIs?</a></li><li><a href="#streams">Streams</a></li></ul></li><li><a href="#concepts">Concepts</a><ul class="toc-headings"><li><a href="#interledger">Interledger</a></li><li><a href="#payment-pointers">Payment Pointers</a></li></ul></li><li><a href="#getting-started">Getting Started</a><ul class="toc-headings"><li><a href="#setup-a-receiving-account">Setup a receiving account</a></li><li><a href="#add-lt-meta-gt-tag-to-website-header">Add &lt;meta&gt; tag to website header</a></li><li><a href="#handle-payments">Handle payments</a></li></ul></li><li><a href="#browser-behaviour">Browser Behaviour</a><ul class="toc-headings"><li><a href="#auditing-dashboard">Auditing / Dashboard</a></li></ul></li><li><a href="#wm-sender-interface">WM Sender Interface</a></li><li><a href="#existing-implementations">Existing Implementations</a><ul class="toc-headings"><li><a href="#wm-receivers">WM Receivers</a></li><li><a href="#wm-senders">WM Senders</a></li><li><a href="#browsers">Browsers</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>WebMonetization.org</h5></div><div><h5>Navigation</h5><a href="/">Home</a><a href="/meta-tag">Meta Tag Generator</a></div><div><h5>Community</h5><a href="https://github.com/interledger/webmonetization.org" target="_blank" rel="noreferrer noopener">GitHub</a><a href="https://forum.interledger.org" target="_blank" rel="noreferrer noopener">ILP Forum</a><a href="https://discourse.wicg.io/t/proposal-web-monetization-a-new-revenue-model-for-the-web/3785" target="_blank" rel="noreferrer noopener">Web Platform Incubator Community Group</a><a href="https://interledger.org" target="_blank" rel="noreferrer noopener">Interledger</a></div><div><h5>Resources</h5><a href="/docs/en/getting-started.html">Docs</a><a href="https://adrianhopebailie.github.io/web-monetization/" target="_blank" rel="noreferrer noopener">Specification</a><a href="https://paymentpointers.org" target="_blank" rel="noreferrer noopener">Payment Pointers</a></div></section><section class="copyright"></section></footer></div></body></html>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api"><span class="arrow-prev">← </span><span>API</span></a><a class="docs-next button" href="/docs/receiving"><span>Receiving Payments</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#goals">Goals</a></li><li><a href="#non-goals">Non-goals</a></li><li><a href="#overview-of-the-flow">Overview of the Flow</a><ul class="toc-headings"><li><a href="#glossary">Glossary</a></li><li><a href="#prerequisites">Prerequisites</a></li><li><a href="#flow">Flow</a></li></ul></li><li><a href="#why-is-a-standard-required">Why is a standard required?</a></li><li><a href="#design-discussion-points">Design Discussion Points</a><ul class="toc-headings"><li><a href="#declaritive-vs-imperative-api">Declaritive vs Imperative API?</a></li><li><a href="#use-updated-payment-request-and-payment-handler-apis">Use updated Payment Request and Payment Handler APIs?</a></li><li><a href="#this-sounds-a-lot-like-streams">This sounds a lot like Streams...</a></li></ul></li><li><a href="#concepts">Concepts</a><ul class="toc-headings"><li><a href="#interledger">Interledger</a></li><li><a href="#payment-pointers">Payment Pointers</a></li></ul></li><li><a href="#getting-started">Getting Started</a><ul class="toc-headings"><li><a href="#setup-a-receiving-account">Setup a receiving account</a></li><li><a href="#add-lt-meta-gt-tag-to-website-header">Add &lt;meta&gt; tag to website header</a></li><li><a href="#handle-payments">Handle payments</a></li></ul></li><li><a href="#browser-behaviour">Browser Behaviour</a><ul class="toc-headings"><li><a href="#auditing-dashboard">Auditing / Dashboard</a></li></ul></li><li><a href="#wm-sender-interface">WM Sender Interface</a></li><li><a href="#existing-implementations">Existing Implementations</a><ul class="toc-headings"><li><a href="#wm-receivers">WM Receivers</a></li><li><a href="#wm-senders">WM Senders</a></li><li><a href="#browsers">Browsers</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>WebMonetization.org</h5></div><div><h5>Navigation</h5><a href="/">Home</a><a href="/meta-tag">Meta Tag Generator</a></div><div><h5>Community</h5><a href="https://github.com/interledger/webmonetization.org" target="_blank" rel="noreferrer noopener">GitHub</a><a href="https://forum.interledger.org" target="_blank" rel="noreferrer noopener">ILP Forum</a><a href="https://discourse.wicg.io/t/proposal-web-monetization-a-new-revenue-model-for-the-web/3785" target="_blank" rel="noreferrer noopener">Web Platform Incubator Community Group</a><a href="https://interledger.org" target="_blank" rel="noreferrer noopener">Interledger</a></div><div><h5>Resources</h5><a href="/docs/en/getting-started.html">Docs</a><a href="https://adrianhopebailie.github.io/web-monetization/" target="_blank" rel="noreferrer noopener">Specification</a><a href="https://paymentpointers.org" target="_blank" rel="noreferrer noopener">Payment Pointers</a></div></section><section class="copyright"></section></footer></div></body></html>
