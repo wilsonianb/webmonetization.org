@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>API · Web Monetization</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="If a user visits your page and has Web Monetization enabled, your site can"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="API · Web Monetization"/><meta property="og:type" content="website"/><meta property="og:url" content="https://webmonetization.org/"/><meta property="og:description" content="If a user visits your page and has Web Monetization enabled, your site can"/><meta property="og:image" content="https://webmonetization.org/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/fav-webmonetization.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/custom.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/wm-icon.svg" alt="Web Monetization"/><h2 class="headerTitleWithLogo">Web Monetization</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/getting-started" target="_self">Docs</a></li><li class=""><a href="/specification.html" target="_self">Specification</a></li><li class=""><a href="https://discourse.wicg.io/t/proposal-web-monetization-a-new-revenue-model-for-the-web/3785" target="_self">WICG Forum</a></li><li class=""><a href="https://github.com/interledger/webmonetization.org" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Overview</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Overview</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/getting-started">Getting Started</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/api">API</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Explainer</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/explainer">Web Monetization</a></li><li class="navListItem"><a class="navItem" href="/docs/receiving">Receiving Payments</a></li><li class="navListItem"><a class="navItem" href="/docs/sending">Senders</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">More</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/specification">Specification</a></li></ul></div></div></section></div><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>JavaScript API · Web Monetization</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="This JavaScript browser API allows Web-monetized websites to request small"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="JavaScript API · Web Monetization"/><meta property="og:type" content="website"/><meta property="og:url" content="https://webmonetization.org/"/><meta property="og:description" content="This JavaScript browser API allows Web-monetized websites to request small"/><meta property="og:image" content="https://webmonetization.org/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/fav-webmonetization.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/custom.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/wm-icon.svg" alt="Web Monetization"/><h2 class="headerTitleWithLogo">Web Monetization</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/getting-started" target="_self">Docs</a></li><li class=""><a href="/specification.html" target="_self">Specification</a></li><li class=""><a href="https://discourse.wicg.io/t/proposal-web-monetization-a-new-revenue-model-for-the-web/3785" target="_self">WICG Forum</a></li><li class=""><a href="https://github.com/interledger/webmonetization.org" target="_self">GitHub</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Overview</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Overview</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/getting-started">Quick Start Guide</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/api">JavaScript API</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Explainer</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/explainer">Web Monetization</a></li><li class="navListItem"><a class="navItem" href="/docs/receiving">Receiving Payments</a></li><li class="navListItem"><a class="navItem" href="/docs/sending">Sending Payments</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">More</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/specification">Specification</a></li><li class="navListItem"><a class="navItem" href="/docs/glossary">Glossary</a></li><li class="navListItem"><a class="navItem" href="/docs/resources">External Resources</a></li></ul></div></div></section></div><script>
             var coll = document.getElementsByClassName('collapsible');
             var checkActiveCategory = true;
             for (var i = 0; i < coll.length; i++) {
@@ -54,40 +54,97 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">API</h1></header><article><div><span><p>If a user visits your page and has Web Monetization enabled, your site can
-detect that Web Monetization is enabled.</p>
-<p>You can access Web Monetization-related events and state through a Javascript
-API on <code>document.monetization</code>.</p>
-<h2><a class="anchor" aria-hidden="true" id="javascript-api"></a><a href="#javascript-api" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Javascript API</h2>
-<pre><code class="hljs css language-ts"><span class="hljs-built_in">document</span>.monetization: EventTarget
-<span class="hljs-built_in">document</span>.monetization.state: <span class="hljs-built_in">string</span>
-</code></pre>
-<p>This Javascript API is injected by any browser or extension that supports Web
-Monetization.</p>
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 class="postHeaderTitle">JavaScript API</h1></header><article><div><span><p>This JavaScript browser API allows Web-monetized websites to request small
+payments from users. Payments are sent to the website by the user's <a href="/#providers">Web
+Monetization provider</a>.</p>
 <blockquote>
-<p>You don't need to include any files to use this Javascript API.</p>
+<p>No files are needed to use this API.</p>
 </blockquote>
-<p>Check the value of <code>document.monetization.state</code> to see if the user visiting
-your page is Web Monetized.</p>
-<p>There are 3 possible states for Web Monetization.</p>
-<h3><a class="anchor" aria-hidden="true" id="no-web-monetization"></a><a href="#no-web-monetization" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>No Web Monetization</h3>
+<p>This API is injected by any browser or extension that supports Web Monetization.</p>
+<blockquote>
+<p>This document represents the current API implementation. Note that an
+<a href="../specification.html">unofficial draft specification</a> suitable for the W3C
+standards track is being developed and should <strong>NOT</strong> be used as a reference for
+current implementations.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="assumptions"></a><a href="#assumptions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Assumptions</h4>
+<ul>
+<li>Your website is <a href="./getting-started">monetized</a>.</li>
+<li>The user visiting your site has an account with a Web Monetization provider.</li>
+<li>The user's browser supports Web Monetization natively or through an extension.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="documentmonetization"></a><a href="#documentmonetization" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Document.Monetization</h2>
+<p>The browser exposes the <code>document.monetization</code> DOM object that implements
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget"><code>EventTarget</code></a>
+and has a read-only <code>state</code> property. The object allows you to track Web
+Monetization events and see whether the user visiting your page is Web monetized.</p>
+<pre><code class="hljs css language-ts"><span class="hljs-built_in">document</span>.monetization: EventTarget
+<span class="hljs-built_in">document</span>.monetization.state: <span class="hljs-string">'stopped'</span> | <span class="hljs-string">'pending'</span> | <span class="hljs-string">'started'</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="states"></a><a href="#states" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>States</h2>
+<p>Check the value of <code>document.monetization.state</code> to see if a user is Web
+Monetized.</p>
+<h3><a class="anchor" aria-hidden="true" id="undefined"></a><a href="#undefined" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>undefined</code></h3>
+<p>Until Web Monetization is built into browsers, the <code>state</code> will be <code>undefined</code>
+unless a polyfill is installed (e.g. a Web Monetization provider's browser
+extension).</p>
 <pre><code class="hljs css language-ts"><span class="hljs-built_in">document</span>.monetization === <span class="hljs-literal">undefined</span>
 </code></pre>
-<p>The user does not support Web Monetization, or there is no <strong>Web Monetization Meta Tag</strong> on the page.</p>
-<h3><a class="anchor" aria-hidden="true" id="pending"></a><a href="#pending" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pending</h3>
+<h3><a class="anchor" aria-hidden="true" id="stopped"></a><a href="#stopped" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>stopped</code></h3>
+<p>The extension is capable of Web Monetization but is not currently sending
+micropayments, nor trying to.</p>
+<pre><code class="hljs css language-ts"><span class="hljs-built_in">document</span>.monetization &amp;&amp; <span class="hljs-built_in">document</span>.monetization.state === <span class="hljs-string">'stopped'</span>
+</code></pre>
+<p>If your site is adding a <code>meta</code> tag dynamically, then the <code>state</code> begins in
+<code>stopped</code>. It transitions to <code>pending</code> after the tag is added.</p>
+<h3><a class="anchor" aria-hidden="true" id="pending"></a><a href="#pending" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>pending</code></h3>
+<p>The extension is trying to send payments but has yet to send the first non-zero
+micropayment.</p>
 <pre><code class="hljs css language-ts"><span class="hljs-built_in">document</span>.monetization &amp;&amp; <span class="hljs-built_in">document</span>.monetization.state === <span class="hljs-string">'pending'</span>
 </code></pre>
-<p>The user is capable of Web Monetization. The <a href="/#providers">Web Monetization Service Provider</a> is starting to send a streaming payment with Interledger.</p>
-<p>If the user is Web Monetized, the <code>document.monetization.state</code> will always begin in this state.</p>
-<h3><a class="anchor" aria-hidden="true" id="started"></a><a href="#started" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Started</h3>
+<p>If the extension recognizes your site's <code>meta</code> tag, then the <code>state</code> begins
+in <code>pending</code>.</p>
+<h3><a class="anchor" aria-hidden="true" id="started"></a><a href="#started" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>started</code></h3>
+<p>The extension is currently sending micropayments.</p>
 <pre><code class="hljs css language-ts"><span class="hljs-built_in">document</span>.monetization &amp;&amp; <span class="hljs-built_in">document</span>.monetization.state === <span class="hljs-string">'started'</span>
 </code></pre>
-<p>The user is Web Monetized and the <a href="/#providers">Web Monetization Service Provider</a> is actively streaming payments to your site with Interledger.</p>
-<p>It can take a couple of seconds for <code>document.monetization.state</code> to go from
-<code>pending</code> to <code>started</code>. The events described below can be used to listen for a
-change in <code>document.monetization.state</code>.</p>
+<p>It can take a few seconds to change from <code>pending</code> to <code>started</code>. The events
+described below can be used to listen for a change in <code>document.monetization.state</code>.</p>
 <h2><a class="anchor" aria-hidden="true" id="browser-events"></a><a href="#browser-events" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Browser Events</h2>
+<h3><a class="anchor" aria-hidden="true" id="monetizationpending"></a><a href="#monetizationpending" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>monetizationpending</code></h3>
+<p>Determine when Web Monetization is enabled by adding an event listener for
+<code>monetizationpending</code> to <code>document.monetization</code>.</p>
+<h4><a class="anchor" aria-hidden="true" id="event-listener"></a><a href="#event-listener" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event Listener</h4>
+<pre><code class="hljs css language-ts"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">pendingEventHandler</span> (<span class="hljs-params">event</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(event)
+}
+
+<span class="hljs-built_in">document</span>
+  .monetization
+  .addEventListener(<span class="hljs-string">'monetizationpending'</span>, pendingEventHandler)
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="event-object"></a><a href="#event-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event Object</h4>
+<table>
+<thead>
+<tr><th>Field</th><th>Value</th><th>Details</th></tr>
+</thead>
+<tbody>
+<tr><td>paymentPointer</td><td>String</td><td>Your payment account URL. The same value is used as the <code>content</code> in your <code>&lt;meta&gt;</code> tag.</td></tr>
+<tr><td>requestId</td><td>String</td><td>This value is identical to the session ID/Monetization ID (UUID v4) generated by the user agent (see <a href="/docs/explainer#flow">Flow</a>).</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="example-event-object"></a><a href="#example-event-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example Event Object</h4>
+<pre><code class="hljs css language-ts">{
+  detail: {
+    paymentPointer: <span class="hljs-string">"$$wallet.example.com/alice"</span>,
+    requestId: <span class="hljs-string">"ec4f9dec-0ba4-4029-8f6a-29dc21f2e0ce"</span>
+  }
+}
+</code></pre>
 <h3><a class="anchor" aria-hidden="true" id="monetizationstart"></a><a href="#monetizationstart" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>monetizationstart</code></h3>
+<p>Determine when Web Monetization has started actively paying by adding an event
+listener for <code>monetizationstart</code> to <code>document.monetization</code>.</p>
+<h4><a class="anchor" aria-hidden="true" id="event-listener-1"></a><a href="#event-listener-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event Listener</h4>
 <pre><code class="hljs css language-ts"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">startEventHandler</span> (<span class="hljs-params">event</span>) </span>{
   <span class="hljs-built_in">console</span>.log(event)
 }
@@ -96,26 +153,58 @@ change in <code>document.monetization.state</code>.</p>
   .monetization
   .addEventListener(<span class="hljs-string">'monetizationstart'</span>, startEventHandler)
 </code></pre>
-<p><em>Event Object</em></p>
+<h4><a class="anchor" aria-hidden="true" id="event-object-1"></a><a href="#event-object-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event Object</h4>
 <table>
 <thead>
 <tr><th>Field</th><th>Value</th><th>Details</th></tr>
 </thead>
 <tbody>
-<tr><td>paymentPointer</td><td>String</td><td>The <code>paymentPointer</code> matches the one in the <code>&lt;meta name=&quot;monetization&quot;&gt;</code> tag.</td></tr>
-<tr><td>requestId</td><td>String</td><td>The <code>requestId</code> matches the Monetization ID (UUID V4) generated by the browser (see <a href="/docs/explainer#flow">Flow</a>).</td></tr>
+<tr><td>paymentPointer</td><td>String</td><td>Your payment account URL. The same value is used as the <code>content</code> in your <code>&lt;meta&gt;</code> tag.</td></tr>
+<tr><td>requestId</td><td>String</td><td>This value is identical to the session ID/Monetization ID (UUID v4) generated by the user agent (see <a href="/docs/explainer#flow">Flow</a>).</td></tr>
 </tbody>
 </table>
-<p><em>Example Event Object</em></p>
-<pre><code class="hljs css language-ts">{ 
+<h4><a class="anchor" aria-hidden="true" id="example-event-object-1"></a><a href="#example-event-object-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example Event Object</h4>
+<pre><code class="hljs css language-ts">{
   detail: {
-    paymentPointer: <span class="hljs-string">"$twitter.xrptipbot.com/Interledger"</span>,
-    requestId: <span class="hljs-string">"ec4f9dec-0ba4-4029-8f6a-29dc21f2e0ce"</span> 
+    paymentPointer: <span class="hljs-string">"$$wallet.example.com/alice"</span>,
+    requestId: <span class="hljs-string">"ec4f9dec-0ba4-4029-8f6a-29dc21f2e0ce"</span>
   }
 }
 </code></pre>
-<p>The <code>monetizationstart</code> event can be listened to determine when Web Monetization has started. To use it add an event listener to document.monetization.</p>
+<h3><a class="anchor" aria-hidden="true" id="monetizationstop"></a><a href="#monetizationstop" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>monetizationstop</code></h3>
+<p>Determine when Web Monetization has stopped by adding an event listener for
+<code>monetizationstop</code> to <code>document.monetization</code>.</p>
+<h4><a class="anchor" aria-hidden="true" id="event-listener-2"></a><a href="#event-listener-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event Listener</h4>
+<pre><code class="hljs css language-ts"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">stopEventHandler</span> (<span class="hljs-params">event</span>) </span>{
+  <span class="hljs-built_in">console</span>.log(event)
+}
+
+<span class="hljs-built_in">document</span>
+  .monetization
+  .addEventListener(<span class="hljs-string">'monetizationstop'</span>, stopEventHandler)
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="event-object-2"></a><a href="#event-object-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event Object</h4>
+<table>
+<thead>
+<tr><th>Field</th><th>Value</th><th>Details</th></tr>
+</thead>
+<tbody>
+<tr><td>paymentPointer</td><td>String</td><td>The payment account URL for the Web Monetization <code>meta</code> tag at the time when payment has stopped.</td></tr>
+<tr><td>requestId</td><td>String</td><td>The session ID/Monetization ID (UUID v4) <a href="/docs/explainer#flow">generated by the browser</a> for the Web Monetization <code>meta</code> tag at the time when payment has stopped.</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="example-event-object-2"></a><a href="#example-event-object-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example Event Object</h4>
+<pre><code class="hljs css language-ts">{
+  detail: {
+    paymentPointer: <span class="hljs-string">"$$wallet.example.com/alice"</span>,
+    requestId: <span class="hljs-string">"ec4f9dec-0ba4-4029-8f6a-29dc21f2e0ce"</span>
+  }
+}
+</code></pre>
 <h3><a class="anchor" aria-hidden="true" id="monetizationprogress"></a><a href="#monetizationprogress" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>monetizationprogress</code></h3>
+<p>Determine the current status of the payment stream by adding an event listener
+for <code>monetizationprogress</code> to <code>document.monetization</code>.</p>
+<h4><a class="anchor" aria-hidden="true" id="event-listener-3"></a><a href="#event-listener-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event Listener</h4>
 <pre><code class="hljs css language-ts"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">progressEventHandler</span> (<span class="hljs-params">event</span>) </span>{
   <span class="hljs-built_in">console</span>.log(event)
 }
@@ -124,30 +213,42 @@ change in <code>document.monetization.state</code>.</p>
   .monetization
   .addEventListener(<span class="hljs-string">'monetizationprogress'</span>, progressEventHandler)
 </code></pre>
-<p><em>Event Object</em></p>
+<h4><a class="anchor" aria-hidden="true" id="event-object-3"></a><a href="#event-object-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Event Object</h4>
 <table>
 <thead>
 <tr><th>Field</th><th>Value</th><th>Details</th></tr>
 </thead>
 <tbody>
-<tr><td>amount</td><td>String</td><td>String containing the destination amount received as specified in the ILP packet.</td></tr>
-<tr><td>assetCode</td><td>String</td><td>The three letter asset code describing the amount's units.</td></tr>
-<tr><td>assetScale</td><td>Number</td><td>A number representing the scale of the amount. For example, cents would have an assetScale of 2.</td></tr>
+<tr><td>paymentPointer</td><td>String</td><td>Your payment account URL. The same value is used as the <code>content</code> in your <code>&lt;meta&gt;</code> tag.</td></tr>
+<tr><td>requestId</td><td>String</td><td>This value is identical to the session ID/Monetization ID (UUID v4) generated by the user agent (see <a href="/docs/explainer#flow">Flow</a>).</td></tr>
+<tr><td>amount</td><td>String</td><td>The destination amount received as specified in the Interledger Protocol (ILP) packet.</td></tr>
+<tr><td>assetCode</td><td>String</td><td>The code (typically three characters) identifying the amount's unit. A unit, for example, could be a currency (USD, XRP).</td></tr>
+<tr><td>assetScale</td><td>Number</td><td>The number of places past the decimal for the amount. For example, if you have USD with an asset scale of two, then the minimum divisible unit is cents.</td></tr>
 </tbody>
 </table>
-<p><em>Example Event Object</em></p>
-<pre><code class="hljs css language-ts">{ 
+<h4><a class="anchor" aria-hidden="true" id="example-event-object-3"></a><a href="#example-event-object-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example Event Object</h4>
+<p>In this example, the total amount of USD received is equal to 7567 × 10^-2
+(75.67).</p>
+<pre><code class="hljs css language-ts">{
   detail: {
-    amount: <span class="hljs-string">"75673"</span>,
-    assetCode: <span class="hljs-string">"XRP"</span>,
-    assetScale: <span class="hljs-number">9</span>
+    paymentPointer: <span class="hljs-string">"$wallet.example.com/alice"</span>,
+    requestId: <span class="hljs-string">"ec4f9dec-0ba4-4029-8f6a-29dc21f2e0ce"</span>
+    amount: <span class="hljs-string">"7567"</span>,
+    assetCode: <span class="hljs-string">"USD"</span>,
+    assetScale: <span class="hljs-number">2</span>
   }
 }
 </code></pre>
-<p>The <code>monetizationprogress</code> event can be listened to show the current status of the STREAMing payment. To use it add an event listener to document.monetization.</p>
 <h2><a class="anchor" aria-hidden="true" id="http-headers"></a><a href="#http-headers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>HTTP Headers</h2>
 <h3><a class="anchor" aria-hidden="true" id="web-monetization-id"></a><a href="#web-monetization-id" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Web-Monetization-Id</code></h3>
-<p>Contains the <code>Monetization ID</code> (currently referred to as <code>requestId</code> in the events) that the browser generated. This header MUST always be sent on SPSP queries for Web Monetization. This value MUST be a UUID version 4.</p>
+<p>The <code>Web-Monetization-Id</code> header contains the Monetization ID (UUID v4)
+generated by the browser. The Monetization ID is identical to the session ID and
+the <code>requestId</code> in the <code>monetizationstart</code> browser event.</p>
+<blockquote>
+<p>The header <strong>MUST ALWAYS</strong> be sent on SPSP queries for Web Monetization and
+<strong>MUST</strong> be a UUID v4.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="example-header"></a><a href="#example-header" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example Header</h4>
 <pre><code class="hljs css language-http"><span class="hljs-attribute">Web-Monetization-Id</span>: dcd479ad-7d8d-4210-956a-13c14b8c67eb
 </code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/getting-started"><span class="arrow-prev">← </span><span>Getting Started</span></a><a class="docs-next button" href="/docs/explainer"><span>Web Monetization</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#javascript-api">Javascript API</a><ul class="toc-headings"><li><a href="#no-web-monetization">No Web Monetization</a></li><li><a href="#pending">Pending</a></li><li><a href="#started">Started</a></li></ul></li><li><a href="#browser-events">Browser Events</a><ul class="toc-headings"><li><a href="#monetizationstart"><code>monetizationstart</code></a></li><li><a href="#monetizationprogress"><code>monetizationprogress</code></a></li></ul></li><li><a href="#http-headers">HTTP Headers</a><ul class="toc-headings"><li><a href="#web-monetization-id"><code>Web-Monetization-Id</code></a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>WebMonetization.org</h5></div><div><h5>Navigation</h5><a href="/">Home</a><a href="/meta-tag">Meta Tag Generator</a></div><div><h5>Community</h5><a href="https://github.com/interledger/webmonetization.org" target="_blank" rel="noreferrer noopener">GitHub</a><a href="https://forum.interledger.org" target="_blank" rel="noreferrer noopener">ILP Forum</a><a href="https://discourse.wicg.io/t/proposal-web-monetization-a-new-revenue-model-for-the-web/3785" target="_blank" rel="noreferrer noopener">Web Platform Incubator Community Group</a><a href="https://interledger.org" target="_blank" rel="noreferrer noopener">Interledger</a></div><div><h5>Resources</h5><a href="/docs/getting-started.html">Docs</a><a href="/specification.html" target="_blank" rel="noreferrer noopener">Specification</a><a href="https://paymentpointers.org" target="_blank" rel="noreferrer noopener">Payment Pointers</a></div></section><section class="copyright"></section></footer></div></body></html>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/getting-started"><span class="arrow-prev">← </span><span>Quick Start Guide</span></a><a class="docs-next button" href="/docs/explainer"><span>Web Monetization</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#documentmonetization">Document.Monetization</a></li><li><a href="#states">States</a><ul class="toc-headings"><li><a href="#undefined"><code>undefined</code></a></li><li><a href="#stopped"><code>stopped</code></a></li><li><a href="#pending"><code>pending</code></a></li><li><a href="#started"><code>started</code></a></li></ul></li><li><a href="#browser-events">Browser Events</a><ul class="toc-headings"><li><a href="#monetizationpending"><code>monetizationpending</code></a></li><li><a href="#monetizationstart"><code>monetizationstart</code></a></li><li><a href="#monetizationstop"><code>monetizationstop</code></a></li><li><a href="#monetizationprogress"><code>monetizationprogress</code></a></li></ul></li><li><a href="#http-headers">HTTP Headers</a><ul class="toc-headings"><li><a href="#web-monetization-id"><code>Web-Monetization-Id</code></a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>WebMonetization.org</h5></div><div><h5>Navigation</h5><a href="/">Home</a><a href="/meta-tag">Meta Tag Generator</a></div><div><h5>Community</h5><a href="https://github.com/interledger/webmonetization.org" target="_blank" rel="noreferrer noopener">GitHub</a><a href="https://forum.interledger.org" target="_blank" rel="noreferrer noopener">ILP Forum</a><a href="https://discourse.wicg.io/t/proposal-web-monetization-a-new-revenue-model-for-the-web/3785" target="_blank" rel="noreferrer noopener">Web Platform Incubator Community Group</a><a href="https://interledger.org" target="_blank" rel="noreferrer noopener">Interledger</a></div><div><h5>Resources</h5><a href="/docs/getting-started.html">Docs</a><a href="/specification.html" target="_blank" rel="noreferrer noopener">Specification</a><a href="https://paymentpointers.org" target="_blank" rel="noreferrer noopener">Payment Pointers</a></div></section><section class="copyright"></section></footer></div></body></html>
